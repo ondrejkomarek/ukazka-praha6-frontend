@@ -17,22 +17,3 @@ export default function Home(/*{ posts }*/) {
   );
 }
 
-/*export async function getStaticProps() {
-  const res = await fetch(`https://ukazka-praha-6-wi7v7.ondigitalocean.app/posts`);
-  const posts = await res.json();
-
-  return {
-    props: { posts },
-  };
-}*/
-/*
-      {/* posts go here /}
-      {posts.map((post, index) => (
-        <div key={index}>
-          <Link href={`/${post.id}`}>
-            <a className="text-3xl text-blue-500 hover:text-blue-400 hover:underline font-bold">
-              {post.title}
-            </a>
-          </Link>
-        </div>
-      ))}*/
