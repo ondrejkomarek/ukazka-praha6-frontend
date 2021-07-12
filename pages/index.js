@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 
 import Link from "next/link";
 
-export default function Home({ posts }) {
+export default function Home(/*{ posts }*/) {
   return (
     <>
       <div className="mb-20">
@@ -13,8 +13,20 @@ export default function Home({ posts }) {
           A place where I can put all of my goofy stuff.
         </p>
       </div>
+    </>
+  );
+}
 
-      {/* posts go here */}
+/*export async function getStaticProps() {
+  const res = await fetch(`https://ukazka-praha-6-wi7v7.ondigitalocean.app/posts`);
+  const posts = await res.json();
+
+  return {
+    props: { posts },
+  };
+}*/
+/*
+      {/* posts go here /}
       {posts.map((post, index) => (
         <div key={index}>
           <Link href={`/${post.id}`}>
@@ -23,17 +35,4 @@ export default function Home({ posts }) {
             </a>
           </Link>
         </div>
-      ))}
-    </>
-  );
-}
-
-export async function getStaticProps() {
-  const url = process.env.API_URL;
-  const res = await fetch(`${url}/posts`);
-  const posts = await res.json();
-
-  return {
-    props: { posts },
-  };
-}
+      ))}*/
